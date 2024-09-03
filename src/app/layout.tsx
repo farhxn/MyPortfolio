@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Your Name", // Replace with your name
-      url: "https://yourportfolio.com" // Replace with your portfolio URL
+      name: "Muhammad Farhan Atif", // Replace with your name
+      url: "https://farhanincode.netlify.app/" // Replace with your portfolio URL
     }
   ],
   twitter: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "My Portfolio",
     description: "Discover my work as a Full Stack Developer with expertise in .NET, Laravel, and mobile technologies. Proud winner of a global mobile competition.",
-    images: "https://yourportfolio.com/profile-image.jpg", // Replace with a link to your profile image
+    images: "https://farhanincode.netlify.app/", // Replace with a link to your profile image
     type: "website"
   }
 };
