@@ -8,9 +8,10 @@ const calistoga = Calistoga({subsets:['latin'], variable:'--font-serif', weight:
 
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Explore the portfolio of a passionate Full Stack Developer specializing in .NET MVC/Core, Laravel, and mobile development using Java and Flutter. Winner of a prestigious global mobile competition.",
+  title: "Muhammad Farhan Atif - Full Stack Developer",
+  description: "Explore the portfolio of Muhammad Farhan Atif, a passionate Full Stack Developer specializing in .NET MVC/Core, Laravel, and mobile development using Java and Flutter. Winner of a prestigious global mobile competition.",
   keywords: [
+    "Muhammad Farhan Atif",
     "Full Stack Developer",
     ".NET MVC",
     ".NET Core",
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Muhammad Farhan Atif", // Replace with your name
-      url: "https://farhanincode.netlify.app/" // Replace with your portfolio URL
+      name: "Muhammad Farhan Atif",
+      url: "https://farhanincode.netlify.app/"
     }
   ],
   twitter: {
@@ -34,13 +35,18 @@ export const metadata: Metadata = {
     creator: "@yourtwitterhandle" // Replace with your Twitter handle
   },
   openGraph: {
-    title: "My Portfolio",
+    title: "Muhammad Farhan Atif - Full Stack Developer",
     description: "Discover my work as a Full Stack Developer with expertise in .NET, Laravel, and mobile technologies. Proud winner of a global mobile competition.",
-    images: "https://farhanincode.netlify.app/", // Replace with a link to your profile image
-    type: "website"
-  }
-};
-
+    images: ["https://farhanincode.netlify.app/profile-image.jpg"], // Replace with a link to your profile image
+    type: "website",
+    url: "https://farhanincode.netlify.app/"
+  },
+  robots: {
+    index: true,
+    follow: true
+  },
+  viewport: "width=device-width, initial-scale=1.0"
+}
 
 
 export default function RootLayout({
