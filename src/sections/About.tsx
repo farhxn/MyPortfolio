@@ -30,6 +30,18 @@ const toolboxItems = [
     title: "Github",
     iconType: GithubIcon,
   },
+  {
+    title: "JavaScript",
+    iconType: JavascriptIcon,
+  },
+  {
+    title: "HTML5",
+    iconType: HTMLIcon,
+  },
+  {
+    title: "Github",
+    iconType: GithubIcon,
+  },
 ];
 
 const hobbies = [
@@ -71,7 +83,7 @@ const hobbies = [
   },
   {
     title: "Food",
-    emoji: "🍴",
+    emoji: "🍜",
     left: "45%",
     top: "70%",
   },
@@ -79,7 +91,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           description="Learn more about who I am, what I do, and what inspires me. "
@@ -87,35 +99,35 @@ export const AboutSection = () => {
           title="A Glimplse into my world"
         />
         <div className="mt-20 flex flex-col gap-8">
-          <Card className="h-[320px]">
-            <CardHeader
-              title="My Reads"
-              description="Explore the books shaping my perspectives."
-            />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            <Card className="h-[320px] md:col-span-2 lg:col-span-1 ">
+              <CardHeader
+                title="My Reads"
+                description="Explore the books shaping my perspectives."
+              />
 
-            <div className="w-40 mx-auto mt-8">
-              <Image src={bookImage} alt="Book Cover" />
-            </div>
-          </Card>
-          <Card className="h-[320px] p-0">
-            <CardHeader
-              title="My Toolbox"
-              description="Explore the technologies and tools I use to craft exceptional
+              <div className="w-40 mx-auto mt-2 md:md-0">
+                <Image src={bookImage} alt="Book Cover" />
+              </div>
+            </Card>
+            <Card className="h-[320px]  md:col-span-3 lg:col-span-2">
+              <CardHeader
+                title="My Toolbox"
+                description="Explore the technologies and tools I use to craft exceptional
                 digital experinces."
-              className="px-6 pt-6"
-            />
-            <ToolboxItem
-              toolboxItems={toolboxItems}
-              className="mt-6 gap-6 pr-6"
-            />
-            <ToolboxItem
-              toolboxItems={toolboxItems}
-              className="mt-6"
-              itemWrapperClassName="-translate-x-1/2"
-            />
-            <div></div>
-          </Card>
-          <Card className="h-[320px] p-0 flex flex-col">
+                className=""
+              />
+              <ToolboxItem toolboxItems={toolboxItems} className="gap-6 pr-6" />
+              <ToolboxItem
+                toolboxItems={toolboxItems}
+                className="mt-6"
+                itemWrapperClassName="-translate-x-1/2"
+              />
+              <div></div>
+            </Card>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
+          <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
             <CardHeader
               title="Beyond the Code"
               description="Explore my interests and hobbies beyound the code."
@@ -139,7 +151,7 @@ export const AboutSection = () => {
               ))}
             </div>
           </Card>
-          <Card className="h-[320px] p-0 relative" >
+          <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
             <Image
               alt="MAP"
               src={mapImage}
@@ -149,6 +161,7 @@ export const AboutSection = () => {
               <Image alt="My Location" src={smileEmoji} className="size-20" />
             </div>
           </Card>
+          </div>
         </div>
       </div>
     </div>
