@@ -5,8 +5,25 @@ import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
+import php from "@/assets/icons/php.svg";
+import net from "@/assets/icons/net.svg";
+import core from "@/assets/icons/core.svg";
+import flutter from "@/assets/icons/flutter.svg";
+import git from "@/assets/icons/git.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
+import laravel from "@/assets/icons/laravel.svg";
+import django from "@/assets/icons/django.svg";
+import java from "@/assets/icons/java.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+
+import SQL from "@/assets/icons/sql.svg";
+import firebase from "@/assets/icons/firebase.svg";
+import MYSQL from "@/assets/icons/mysql.svg";
+import bootstrap from "@/assets/icons/bootstrap.svg";
+import jquery from "@/assets/icons/jquery.svg";
+import python from "@/assets/icons/python.svg";
+import c from "@/assets/icons/c.svg";
+
 import {motion} from 'framer-motion'
 import mapImage from "@/assets/images/map.png";
 import smileEmoji from "@/assets/images/memoji-smile.png";
@@ -32,17 +49,58 @@ const toolboxItems = [
     iconType: GithubIcon,
   },
   {
-    title: "JavaScript",
-    iconType: JavascriptIcon,
+    title: "Java",
+    iconType: java,
   },
   {
-    title: "HTML5",
-    iconType: HTMLIcon,
+    title: "PHP",
+    iconType: php,
   },
   {
-    title: "Github",
-    iconType: GithubIcon,
+    title: "Laravel",
+    iconType: laravel,
   },
+  {
+    title: "Django",
+    iconType: django,
+  },  {
+    title: "ASP .NET MVC",
+    iconType: net,
+  },  {
+    title: "ASP .NET Core",
+    iconType: core,
+  },  {
+    title: "Flutter",
+    iconType: flutter,
+  },  {
+    title: "GIT",
+    iconType: git,
+  },  {
+    title: "SQL",
+    iconType: SQL,
+  },  {
+    title: "MYSQL",
+    iconType: MYSQL,
+  },  {
+    title: "Firebase",
+    iconType: firebase,
+  },  {
+    title: "Bootstrap",
+    iconType: bootstrap,
+  },
+  {
+    title: "Jquery",
+    iconType: jquery,
+  },
+  {
+    title: "Python",
+    iconType: python,
+  },
+  {
+    title: "C++",
+    iconType: c,
+  },
+
 ];
 
 const hobbies = [
@@ -93,7 +151,7 @@ const hobbies = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div className="py-20 lg:py-28" id="About">
       <div className="container">
         <SectionHeader
           description="Learn more about who I am, what I do, and what inspires me. "
@@ -119,11 +177,11 @@ export const AboutSection = () => {
                 digital experinces."
                 className=""
               />
-              <ToolboxItem toolboxItems={toolboxItems} className="" itemWrapperClassName="animate-move-left [animation-duration:30s]" />
+              <ToolboxItem toolboxItems={toolboxItems} className="" itemWrapperClassName="animate-move-left hover:[animation-play-state:paused] [animation-duration:30s]" />
               <ToolboxItem
                 toolboxItems={toolboxItems}
                 className="mt-6"
-                itemWrapperClassName="animate-move-right [animation-duration:15s]"
+                itemWrapperClassName="animate-move-right [animation-duration:15s] hover:[animation-play-state:paused]"
               />
               <div></div>
             </Card>

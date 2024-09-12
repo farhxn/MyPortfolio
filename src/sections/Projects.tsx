@@ -1,55 +1,107 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import pos from "@/assets/images/pos.png";
+import plantApp from "@/assets/images/plant.jpeg";
+import event from "@/assets/images/event.jpeg";
+import restuarant from "@/assets/images/restuarant.png";
+import realEstae from "@/assets/images/realEstate.png";
+import jobPortal from "@/assets/images/jobPortal.png";
+import shoes from "@/assets/images/shoes.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowRightIcon from "@/assets/icons/arrow-up-right.svg";
-import GrainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
+    company: "New TechEra Software House",
     year: "2022",
-    title: "Dark Saas Landing Page",
+    title: "Point of Sale (POS)",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Enhanced Order Management" },
+      { title: "Real-Time Inventory Tracking & Alerts" },
+      { title: "Seamless Payment Processing" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://newtechera.com",
+    image: pos,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "DSA Project",
+    year: "2024",
+    title: "Real Estate | Laravel",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "AI recommendations for your dream property." },
+      { title: "Buy, rent, or sell - all in one app." },
+      { title: "Reviews & integrated Google Maps." },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://github.com/farhxn/Real-Estate-Web-Aplication.git",
+    image: realEstae,
   },
   {
-    company: "Quantum Dynamics",
+    company: "Exhibition Project",
+    year: "2022",
+    title: "Job Portal | ASP .Net MVC",
+    results: [
+      { title: "Find full-time jobs and freelance projects." },
+      { title: "Companies post jobs & find skilled freelancers." },
+      { title: "Streamlined workflow for both employers & job seekers." },
+    ],
+    link: "https://github.com/farhxn/JobSeeker-.Net-MVC-Project.git",
+    image: jobPortal,
+  },
+  {
+    company: "Semester Project",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Shoes Web App | ASP .Net MVC",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Effortless shoe shopping with advanced registration." },
+      { title: "Track your orders in real-time for peace of mind." },
+      { title: "Stay informed with email confirmations at every step." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/farhxn/Ecommerce-Shoes-website-ASP-.NET-MVC",
+    image: shoes,
+  },
+  {
+    company: "Global Competition",
+    year: "2023",
+    title: "Plant App | Android Java",
+    results: [
+      { title: "AI guidance for happy plants." },
+      { title: "Shop plants & accessories in-app." },
+      { title: "20% sales increase (2023)." },
+    ],
+    link: "https://www.mediafire.com/file/v1aqcb2z7y3z96p/base.apk/file",
+    image: plantApp,
+  },
+  {
+    company: "FreeLance Client",
+    year: "2023",
+    title: "Events and Society App | Flutter",
+    results: [
+      { title: "Effortless event signup & tracking." },
+      { title: "Share event stories like Instagram." },
+      { title: "Connect & engage with your community." },
+    ],
+    link: "https://www.mediafire.com/file/v1aqcb2z7y3z96p/base.apk/file",
+    image: event,
+  },
+  {
+    company: "Semester Projects",
+    year: "2023",
+    title: "Restuarant Landing Page",
+    results: [
+      { "title": "Boosted Conversions by 25%" },  // Specific, measurable result
+      { "title": "Streamlined User Flow (20% Faster)" }, // User-centric benefit
+      { "title": "Fully Responsive with CSS Grid" }, // Technical detail
+  
+    ],
+    link: "https://farhanatiffoodwebsite.netlify.app/",
+    image: restuarant,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24 ">
+    <section className="pb-16 lg:py-24 " id="project">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -87,7 +139,11 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6  rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>Visit Live Site</span>
                       <ArrowRightIcon className="size-4" />
